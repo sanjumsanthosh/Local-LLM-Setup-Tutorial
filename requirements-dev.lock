@@ -10,3 +10,732 @@
 #   universal: false
 
 -e file:.
+aiohappyeyeballs==2.4.0
+    # via aiohttp
+aiohttp==3.10.5
+    # via auth0-python
+    # via instructor
+    # via langchain
+    # via langchain-community
+    # via litellm
+aiosignal==1.3.1
+    # via aiohttp
+alembic==1.13.2
+    # via embedchain
+annotated-types==0.7.0
+    # via pydantic
+anyio==4.6.0
+    # via httpx
+    # via openai
+    # via starlette
+    # via watchfiles
+appdirs==1.4.4
+    # via crewai
+asgiref==3.8.1
+    # via opentelemetry-instrumentation-asgi
+async-timeout==4.0.3
+    # via aiohttp
+    # via langchain
+attrs==24.2.0
+    # via aiohttp
+    # via jsonschema
+    # via lancedb
+    # via outcome
+    # via referencing
+    # via trio
+auth0-python==4.7.2
+    # via crewai
+backoff==2.2.1
+    # via posthog
+bcrypt==4.2.0
+    # via chromadb
+beautifulsoup4==4.12.3
+    # via crewai-tools
+    # via embedchain
+boto3==1.35.24
+    # via cohere
+botocore==1.35.24
+    # via boto3
+    # via s3transfer
+build==1.2.2
+    # via chromadb
+    # via poetry
+cachecontrol==0.14.0
+    # via poetry
+cachetools==5.5.0
+    # via google-auth
+    # via gptcache
+    # via lancedb
+certifi==2024.8.30
+    # via httpcore
+    # via httpx
+    # via kubernetes
+    # via pulsar-client
+    # via requests
+    # via selenium
+cffi==1.17.1
+    # via cryptography
+charset-normalizer==3.3.2
+    # via requests
+chroma-hnswlib==0.7.3
+    # via chromadb
+chromadb==0.4.24
+    # via crewai-tools
+    # via embedchain
+cleo==2.1.0
+    # via poetry
+click==8.1.7
+    # via crewai
+    # via lancedb
+    # via litellm
+    # via typer
+    # via uvicorn
+cohere==5.9.4
+    # via embedchain
+    # via langchain-cohere
+coloredlogs==15.0.1
+    # via onnxruntime
+crashtest==0.4.1
+    # via cleo
+    # via poetry
+crewai==0.61.0
+    # via local-llm-setup-tutorial
+crewai-tools==0.12.1
+    # via crewai
+cryptography==43.0.1
+    # via auth0-python
+    # via secretstorage
+dataclasses-json==0.6.7
+    # via langchain-community
+decorator==5.1.1
+    # via retry
+deprecated==1.2.14
+    # via opentelemetry-api
+    # via opentelemetry-exporter-otlp-proto-grpc
+    # via opentelemetry-exporter-otlp-proto-http
+    # via opentelemetry-semantic-conventions
+deprecation==2.1.0
+    # via lancedb
+distlib==0.3.8
+    # via virtualenv
+distro==1.9.0
+    # via openai
+docker==7.1.0
+    # via crewai-tools
+docstring-parser==0.16
+    # via google-cloud-aiplatform
+    # via instructor
+docx2txt==0.8
+    # via crewai-tools
+dulwich==0.21.7
+    # via poetry
+durationpy==0.7
+    # via kubernetes
+embedchain==0.1.121
+    # via crewai
+    # via crewai-tools
+exceptiongroup==1.2.2
+    # via anyio
+    # via pytest
+    # via trio
+    # via trio-websocket
+fastapi==0.115.0
+    # via chromadb
+fastavro==1.9.7
+    # via cohere
+fastjsonschema==2.20.0
+    # via poetry
+filelock==3.16.1
+    # via cachecontrol
+    # via huggingface-hub
+    # via virtualenv
+flatbuffers==24.3.25
+    # via onnxruntime
+frozenlist==1.4.1
+    # via aiohttp
+    # via aiosignal
+fsspec==2024.9.0
+    # via huggingface-hub
+google-api-core==2.20.0
+    # via google-cloud-aiplatform
+    # via google-cloud-bigquery
+    # via google-cloud-core
+    # via google-cloud-resource-manager
+    # via google-cloud-storage
+google-auth==2.35.0
+    # via google-api-core
+    # via google-cloud-aiplatform
+    # via google-cloud-bigquery
+    # via google-cloud-core
+    # via google-cloud-resource-manager
+    # via google-cloud-storage
+    # via kubernetes
+google-cloud-aiplatform==1.67.1
+    # via embedchain
+google-cloud-bigquery==3.25.0
+    # via google-cloud-aiplatform
+google-cloud-core==2.4.1
+    # via google-cloud-bigquery
+    # via google-cloud-storage
+google-cloud-resource-manager==1.12.5
+    # via google-cloud-aiplatform
+google-cloud-storage==2.18.2
+    # via google-cloud-aiplatform
+google-crc32c==1.6.0
+    # via google-cloud-storage
+    # via google-resumable-media
+google-resumable-media==2.7.2
+    # via google-cloud-bigquery
+    # via google-cloud-storage
+googleapis-common-protos==1.65.0
+    # via google-api-core
+    # via grpc-google-iam-v1
+    # via grpcio-status
+    # via opentelemetry-exporter-otlp-proto-grpc
+    # via opentelemetry-exporter-otlp-proto-http
+gptcache==0.1.44
+    # via embedchain
+greenlet==3.1.1
+    # via sqlalchemy
+grpc-google-iam-v1==0.13.1
+    # via google-cloud-resource-manager
+grpcio==1.66.1
+    # via chromadb
+    # via google-api-core
+    # via googleapis-common-protos
+    # via grpc-google-iam-v1
+    # via grpcio-status
+    # via grpcio-tools
+    # via opentelemetry-exporter-otlp-proto-grpc
+    # via qdrant-client
+grpcio-status==1.62.3
+    # via google-api-core
+grpcio-tools==1.62.3
+    # via qdrant-client
+h11==0.14.0
+    # via httpcore
+    # via uvicorn
+    # via wsproto
+h2==4.1.0
+    # via httpx
+hpack==4.0.0
+    # via h2
+httpcore==1.0.5
+    # via httpx
+httptools==0.6.1
+    # via uvicorn
+httpx==0.27.2
+    # via cohere
+    # via langsmith
+    # via openai
+    # via qdrant-client
+httpx-sse==0.4.0
+    # via cohere
+huggingface-hub==0.25.0
+    # via tokenizers
+humanfriendly==10.0
+    # via coloredlogs
+hyperframe==6.0.1
+    # via h2
+idna==3.10
+    # via anyio
+    # via httpx
+    # via requests
+    # via trio
+    # via yarl
+importlib-metadata==8.4.0
+    # via keyring
+    # via litellm
+    # via opentelemetry-api
+importlib-resources==6.4.5
+    # via chromadb
+iniconfig==2.0.0
+    # via pytest
+installer==0.7.0
+    # via poetry
+instructor==1.3.3
+    # via crewai
+jaraco-classes==3.4.0
+    # via keyring
+jeepney==0.8.0
+    # via keyring
+    # via secretstorage
+jinja2==3.1.4
+    # via litellm
+jiter==0.4.2
+    # via instructor
+    # via openai
+jmespath==1.0.1
+    # via boto3
+    # via botocore
+json-repair==0.25.3
+    # via crewai
+jsonpatch==1.33
+    # via langchain-core
+jsonpointer==3.0.0
+    # via jsonpatch
+jsonref==1.1.0
+    # via crewai
+jsonschema==4.23.0
+    # via litellm
+jsonschema-specifications==2023.12.1
+    # via jsonschema
+keyring==24.3.1
+    # via poetry
+kubernetes==31.0.0
+    # via chromadb
+lancedb==0.5.7
+    # via crewai-tools
+langchain==0.2.16
+    # via crewai
+    # via crewai-tools
+    # via embedchain
+    # via langchain-community
+langchain-cohere==0.1.9
+    # via embedchain
+langchain-community==0.2.17
+    # via embedchain
+    # via langchain-experimental
+langchain-core==0.2.41
+    # via langchain
+    # via langchain-cohere
+    # via langchain-community
+    # via langchain-experimental
+    # via langchain-openai
+    # via langchain-text-splitters
+langchain-experimental==0.0.65
+    # via langchain-cohere
+langchain-openai==0.1.25
+    # via embedchain
+langchain-text-splitters==0.2.4
+    # via langchain
+langsmith==0.1.125
+    # via langchain
+    # via langchain-community
+    # via langchain-core
+litellm==1.47.0
+    # via crewai
+mako==1.3.5
+    # via alembic
+markdown-it-py==3.0.0
+    # via rich
+markupsafe==2.1.5
+    # via jinja2
+    # via mako
+marshmallow==3.22.0
+    # via dataclasses-json
+mdurl==0.1.2
+    # via markdown-it-py
+mem0ai==0.0.20
+    # via embedchain
+mmh3==5.0.0
+    # via chromadb
+monotonic==1.6
+    # via posthog
+more-itertools==10.5.0
+    # via jaraco-classes
+mpmath==1.3.0
+    # via sympy
+msgpack==1.1.0
+    # via cachecontrol
+multidict==6.1.0
+    # via aiohttp
+    # via yarl
+mypy-extensions==1.0.0
+    # via typing-inspect
+nodeenv==1.9.1
+    # via pyright
+numpy==1.26.4
+    # via chroma-hnswlib
+    # via chromadb
+    # via gptcache
+    # via langchain
+    # via langchain-community
+    # via onnxruntime
+    # via pandas
+    # via pyarrow
+    # via pylance
+    # via qdrant-client
+    # via shapely
+oauthlib==3.2.2
+    # via kubernetes
+    # via requests-oauthlib
+onnxruntime==1.19.2
+    # via chromadb
+openai==1.47.0
+    # via crewai
+    # via crewai-tools
+    # via embedchain
+    # via instructor
+    # via langchain-openai
+    # via litellm
+    # via mem0ai
+opentelemetry-api==1.27.0
+    # via chromadb
+    # via crewai
+    # via opentelemetry-exporter-otlp-proto-grpc
+    # via opentelemetry-exporter-otlp-proto-http
+    # via opentelemetry-instrumentation
+    # via opentelemetry-instrumentation-asgi
+    # via opentelemetry-instrumentation-fastapi
+    # via opentelemetry-sdk
+    # via opentelemetry-semantic-conventions
+opentelemetry-exporter-otlp-proto-common==1.27.0
+    # via opentelemetry-exporter-otlp-proto-grpc
+    # via opentelemetry-exporter-otlp-proto-http
+opentelemetry-exporter-otlp-proto-grpc==1.27.0
+    # via chromadb
+opentelemetry-exporter-otlp-proto-http==1.27.0
+    # via crewai
+opentelemetry-instrumentation==0.48b0
+    # via opentelemetry-instrumentation-asgi
+    # via opentelemetry-instrumentation-fastapi
+opentelemetry-instrumentation-asgi==0.48b0
+    # via opentelemetry-instrumentation-fastapi
+opentelemetry-instrumentation-fastapi==0.48b0
+    # via chromadb
+opentelemetry-proto==1.27.0
+    # via opentelemetry-exporter-otlp-proto-common
+    # via opentelemetry-exporter-otlp-proto-grpc
+    # via opentelemetry-exporter-otlp-proto-http
+opentelemetry-sdk==1.27.0
+    # via chromadb
+    # via crewai
+    # via opentelemetry-exporter-otlp-proto-grpc
+    # via opentelemetry-exporter-otlp-proto-http
+opentelemetry-semantic-conventions==0.48b0
+    # via opentelemetry-instrumentation-asgi
+    # via opentelemetry-instrumentation-fastapi
+    # via opentelemetry-sdk
+opentelemetry-util-http==0.48b0
+    # via opentelemetry-instrumentation-asgi
+    # via opentelemetry-instrumentation-fastapi
+orjson==3.10.7
+    # via chromadb
+    # via langsmith
+outcome==1.3.0.post0
+    # via trio
+overrides==7.7.0
+    # via chromadb
+    # via lancedb
+packaging==24.1
+    # via build
+    # via deprecation
+    # via google-cloud-aiplatform
+    # via google-cloud-bigquery
+    # via huggingface-hub
+    # via langchain-core
+    # via marshmallow
+    # via onnxruntime
+    # via poetry
+    # via pytest
+pandas==2.2.3
+    # via langchain-cohere
+parameterized==0.9.0
+    # via cohere
+pexpect==4.9.0
+    # via poetry
+pkginfo==1.11.1
+    # via poetry
+platformdirs==4.3.6
+    # via poetry
+    # via virtualenv
+pluggy==1.5.0
+    # via pytest
+poetry==1.8.3
+    # via crewai
+    # via poetry-plugin-export
+poetry-core==1.9.0
+    # via poetry
+    # via poetry-plugin-export
+poetry-plugin-export==1.8.0
+    # via poetry
+portalocker==2.10.1
+    # via qdrant-client
+posthog==3.6.6
+    # via chromadb
+    # via embedchain
+    # via mem0ai
+proto-plus==1.24.0
+    # via google-api-core
+    # via google-cloud-aiplatform
+    # via google-cloud-resource-manager
+protobuf==4.25.5
+    # via google-api-core
+    # via google-cloud-aiplatform
+    # via google-cloud-resource-manager
+    # via googleapis-common-protos
+    # via grpc-google-iam-v1
+    # via grpcio-status
+    # via grpcio-tools
+    # via onnxruntime
+    # via opentelemetry-proto
+    # via proto-plus
+ptyprocess==0.7.0
+    # via pexpect
+pulsar-client==3.5.0
+    # via chromadb
+py==1.11.0
+    # via retry
+pyarrow==17.0.0
+    # via pylance
+pyasn1==0.6.1
+    # via pyasn1-modules
+    # via rsa
+pyasn1-modules==0.4.1
+    # via google-auth
+pycparser==2.22
+    # via cffi
+pydantic==2.9.2
+    # via chromadb
+    # via cohere
+    # via crewai
+    # via crewai-tools
+    # via fastapi
+    # via google-cloud-aiplatform
+    # via instructor
+    # via lancedb
+    # via langchain
+    # via langchain-core
+    # via langsmith
+    # via litellm
+    # via mem0ai
+    # via openai
+    # via qdrant-client
+pydantic-core==2.23.4
+    # via cohere
+    # via instructor
+    # via pydantic
+pygments==2.18.0
+    # via rich
+pyjwt==2.9.0
+    # via auth0-python
+pylance==0.9.18
+    # via lancedb
+pypdf==4.3.1
+    # via embedchain
+pypika==0.48.9
+    # via chromadb
+pyproject-hooks==1.1.0
+    # via build
+    # via poetry
+pyright==1.1.381
+    # via crewai-tools
+pysbd==0.3.4
+    # via embedchain
+pysocks==1.7.1
+    # via urllib3
+pytest==8.3.3
+    # via crewai-tools
+python-dateutil==2.9.0.post0
+    # via botocore
+    # via google-cloud-bigquery
+    # via kubernetes
+    # via pandas
+    # via posthog
+python-dotenv==1.0.1
+    # via crewai
+    # via embedchain
+    # via litellm
+    # via uvicorn
+pytube==15.0.0
+    # via crewai-tools
+pytz==2024.2
+    # via mem0ai
+    # via pandas
+pyyaml==6.0.2
+    # via chromadb
+    # via huggingface-hub
+    # via kubernetes
+    # via lancedb
+    # via langchain
+    # via langchain-community
+    # via langchain-core
+    # via uvicorn
+qdrant-client==1.11.2
+    # via mem0ai
+rapidfuzz==3.9.7
+    # via cleo
+ratelimiter==1.2.0.post0
+    # via lancedb
+referencing==0.35.1
+    # via jsonschema
+    # via jsonschema-specifications
+regex==2024.9.11
+    # via crewai
+    # via tiktoken
+requests==2.32.3
+    # via auth0-python
+    # via cachecontrol
+    # via chromadb
+    # via cohere
+    # via crewai-tools
+    # via docker
+    # via google-api-core
+    # via google-cloud-bigquery
+    # via google-cloud-storage
+    # via gptcache
+    # via huggingface-hub
+    # via kubernetes
+    # via lancedb
+    # via langchain
+    # via langchain-community
+    # via langsmith
+    # via litellm
+    # via opentelemetry-exporter-otlp-proto-http
+    # via poetry
+    # via posthog
+    # via requests-oauthlib
+    # via requests-toolbelt
+    # via tiktoken
+requests-oauthlib==2.0.0
+    # via kubernetes
+requests-toolbelt==1.0.0
+    # via poetry
+retry==0.9.2
+    # via lancedb
+rich==13.8.1
+    # via embedchain
+    # via instructor
+    # via typer
+rpds-py==0.20.0
+    # via jsonschema
+    # via referencing
+rsa==4.9
+    # via google-auth
+s3transfer==0.10.2
+    # via boto3
+schema==0.7.7
+    # via embedchain
+secretstorage==3.3.3
+    # via keyring
+selenium==4.25.0
+    # via crewai-tools
+semver==3.0.2
+    # via lancedb
+setuptools==75.1.0
+    # via grpcio-tools
+    # via opentelemetry-instrumentation
+shapely==2.0.6
+    # via google-cloud-aiplatform
+shellingham==1.5.4
+    # via poetry
+    # via typer
+six==1.16.0
+    # via kubernetes
+    # via posthog
+    # via python-dateutil
+sniffio==1.3.1
+    # via anyio
+    # via httpx
+    # via openai
+    # via trio
+sortedcontainers==2.4.0
+    # via trio
+soupsieve==2.6
+    # via beautifulsoup4
+sqlalchemy==2.0.35
+    # via alembic
+    # via embedchain
+    # via langchain
+    # via langchain-community
+    # via mem0ai
+starlette==0.38.5
+    # via fastapi
+sympy==1.13.3
+    # via onnxruntime
+tabulate==0.9.0
+    # via langchain-cohere
+tenacity==8.5.0
+    # via chromadb
+    # via instructor
+    # via langchain
+    # via langchain-community
+    # via langchain-core
+tiktoken==0.7.0
+    # via embedchain
+    # via langchain-openai
+    # via litellm
+tokenizers==0.20.0
+    # via chromadb
+    # via cohere
+    # via litellm
+tomli==2.0.1
+    # via build
+    # via poetry
+    # via pytest
+tomlkit==0.13.2
+    # via poetry
+tqdm==4.66.5
+    # via chromadb
+    # via huggingface-hub
+    # via lancedb
+    # via openai
+trio==0.26.2
+    # via selenium
+    # via trio-websocket
+trio-websocket==0.11.1
+    # via selenium
+trove-classifiers==2024.9.12
+    # via poetry
+typer==0.12.5
+    # via chromadb
+    # via instructor
+types-requests==2.32.0.20240914
+    # via cohere
+typing-extensions==4.12.2
+    # via alembic
+    # via anyio
+    # via asgiref
+    # via chromadb
+    # via cohere
+    # via fastapi
+    # via huggingface-hub
+    # via langchain-core
+    # via multidict
+    # via openai
+    # via opentelemetry-sdk
+    # via pydantic
+    # via pydantic-core
+    # via pypdf
+    # via selenium
+    # via sqlalchemy
+    # via typer
+    # via typing-inspect
+    # via uvicorn
+typing-inspect==0.9.0
+    # via dataclasses-json
+tzdata==2024.1
+    # via pandas
+urllib3==2.2.3
+    # via auth0-python
+    # via botocore
+    # via docker
+    # via dulwich
+    # via kubernetes
+    # via qdrant-client
+    # via requests
+    # via selenium
+    # via types-requests
+uvicorn==0.30.6
+    # via chromadb
+uvloop==0.20.0
+    # via uvicorn
+virtualenv==20.26.5
+    # via poetry
+watchfiles==0.24.0
+    # via uvicorn
+websocket-client==1.8.0
+    # via kubernetes
+    # via selenium
+websockets==13.0.1
+    # via uvicorn
+wrapt==1.16.0
+    # via deprecated
+    # via opentelemetry-instrumentation
+wsproto==1.2.0
+    # via trio-websocket
+yarl==1.11.1
+    # via aiohttp
+zipp==3.20.2
+    # via importlib-metadata

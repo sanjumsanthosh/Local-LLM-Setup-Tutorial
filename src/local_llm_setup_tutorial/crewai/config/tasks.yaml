@@ -1,0 +1,6 @@
+teacher_task:
+  description: >
+    Teach students the fundamentals of math on addition
+  expected_output: >
+    A list of 10 question starting with the easiest and ending with the hardest on addition
+  agent: teacher
