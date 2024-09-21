@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+    "src/local_llm_setup_tutorial/crewai/basic_example",
+    "src/local_llm_setup_tutorial/crewai/trip_planner",
+    "src/local_llm_setup_tutorial/crewai/trip_planner/tools"
+  ]
+}
