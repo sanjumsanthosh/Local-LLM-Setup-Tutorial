@@ -9,6 +9,7 @@ dependencies = [
     "crewai[tools]>=0.61.0",
     "icecream>=2.1.3",
     "duckduckgo-search>=6.2.12",
+    "gpt-researcher @ file:///home/sanjay/Development/personal/gpt-researcher",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
@@ -17,6 +18,7 @@ requires-python = ">= 3.8"
 "local-llm-setup-tutorial" = "local_llm_setup_tutorial:main"
 "crewai_basic" = "local_llm_setup_tutorial.crewai.basic_example:run"
 "crewai_trip_planner" = "local_llm_setup_tutorial.crewai.trip_planner:run"
+"gpt_basic" = "local_llm_setup_tutorial.gpt_researcher.basic_example:run"
 
 [build-system]
 requires = ["hatchling"]

@@ -10,6 +10,8 @@
 #   universal: false
 
 -e file:.
+aiofiles==24.1.0
+    # via gpt-researcher
 aiohappyeyeballs==2.4.0
     # via aiohttp
 aiohttp==3.10.5
@@ -31,6 +33,8 @@ anyio==4.6.0
     # via watchfiles
 appdirs==1.4.4
     # via crewai
+arxiv==2.1.3
+    # via gpt-researcher
 asgiref==3.8.1
     # via opentelemetry-instrumentation-asgi
 asttokens==2.4.1
@@ -49,16 +53,22 @@ auth0-python==4.7.2
     # via crewai
 backoff==2.2.1
     # via posthog
+    # via unstructured
 bcrypt==4.2.0
     # via chromadb
 beautifulsoup4==4.12.3
     # via crewai-tools
     # via embedchain
+    # via gpt-researcher
+    # via htmldocx
+    # via unstructured
 boto3==1.35.24
     # via cohere
 botocore==1.35.24
     # via boto3
     # via s3transfer
+brotli==1.1.0
+    # via fonttools
 build==1.2.2
     # via chromadb
     # via poetry
@@ -75,10 +85,15 @@ certifi==2024.8.30
     # via pulsar-client
     # via requests
     # via selenium
+    # via unstructured-client
 cffi==1.17.1
     # via cryptography
+    # via weasyprint
+chardet==5.2.0
+    # via unstructured
 charset-normalizer==3.3.2
     # via requests
+    # via unstructured-client
 chroma-hnswlib==0.7.3
     # via chromadb
 chromadb==0.4.24
@@ -91,12 +106,15 @@ click==8.1.7
     # via duckduckgo-search
     # via lancedb
     # via litellm
+    # via nltk
+    # via python-oxmsg
     # via typer
     # via uvicorn
 cohere==5.9.4
     # via embedchain
     # via langchain-cohere
 colorama==0.4.6
+    # via gpt-researcher
     # via icecream
 coloredlogs==15.0.1
     # via onnxruntime
@@ -110,10 +128,17 @@ crewai-tools==0.12.1
 cryptography==43.0.1
     # via auth0-python
     # via secretstorage
+    # via unstructured-client
+cssselect2==0.7.0
+    # via weasyprint
 dataclasses-json==0.6.7
     # via langchain-community
+    # via unstructured
+    # via unstructured-client
 decorator==5.1.1
     # via retry
+deepdiff==8.0.1
+    # via unstructured-client
 deprecated==1.2.14
     # via opentelemetry-api
     # via opentelemetry-exporter-otlp-proto-grpc
@@ -127,12 +152,15 @@ distro==1.9.0
     # via openai
 docker==7.1.0
     # via crewai-tools
+docopt==0.6.2
+    # via md2pdf
 docstring-parser==0.16
     # via google-cloud-aiplatform
     # via instructor
 docx2txt==0.8
     # via crewai-tools
 duckduckgo-search==6.2.12
+    # via gpt-researcher
     # via local-llm-setup-tutorial
 dulwich==0.21.7
     # via poetry
@@ -141,6 +169,8 @@ durationpy==0.7
 embedchain==0.1.121
     # via crewai
     # via crewai-tools
+emoji==2.13.0
+    # via unstructured
 exceptiongroup==1.2.2
     # via anyio
     # via pytest
@@ -150,35 +180,55 @@ executing==2.1.0
     # via icecream
 fastapi==0.115.0
     # via chromadb
+    # via gpt-researcher
 fastavro==1.9.7
     # via cohere
 fastjsonschema==2.20.0
     # via poetry
+feedparser==6.0.11
+    # via arxiv
 filelock==3.16.1
     # via cachecontrol
     # via huggingface-hub
     # via virtualenv
+filetype==1.2.0
+    # via unstructured
 flatbuffers==24.3.25
     # via onnxruntime
+fonttools==4.53.1
+    # via weasyprint
 frozenlist==1.4.1
     # via aiohttp
     # via aiosignal
 fsspec==2024.9.0
     # via huggingface-hub
+google-ai-generativelanguage==0.6.6
+    # via google-generativeai
 google-api-core==2.20.0
+    # via google-ai-generativelanguage
+    # via google-api-python-client
     # via google-cloud-aiplatform
     # via google-cloud-bigquery
     # via google-cloud-core
     # via google-cloud-resource-manager
     # via google-cloud-storage
+    # via google-generativeai
+google-api-python-client==2.146.0
+    # via google-generativeai
 google-auth==2.35.0
+    # via google-ai-generativelanguage
     # via google-api-core
+    # via google-api-python-client
+    # via google-auth-httplib2
     # via google-cloud-aiplatform
     # via google-cloud-bigquery
     # via google-cloud-core
     # via google-cloud-resource-manager
     # via google-cloud-storage
+    # via google-generativeai
     # via kubernetes
+google-auth-httplib2==0.2.0
+    # via google-api-python-client
 google-cloud-aiplatform==1.67.1
     # via embedchain
 google-cloud-bigquery==3.25.0
@@ -193,6 +243,8 @@ google-cloud-storage==2.18.2
 google-crc32c==1.6.0
     # via google-cloud-storage
     # via google-resumable-media
+google-generativeai==0.7.2
+    # via langchain-google-genai
 google-resumable-media==2.7.2
     # via google-cloud-bigquery
     # via google-cloud-storage
@@ -202,6 +254,8 @@ googleapis-common-protos==1.65.0
     # via grpcio-status
     # via opentelemetry-exporter-otlp-proto-grpc
     # via opentelemetry-exporter-otlp-proto-http
+gpt-researcher @ file:///home/sanjay/Development/personal/gpt-researcher
+    # via local-llm-setup-tutorial
 gptcache==0.1.44
     # via embedchain
 greenlet==3.1.1
@@ -229,8 +283,15 @@ h2==4.1.0
     # via httpx
 hpack==4.0.0
     # via h2
+html5lib==1.1
+    # via weasyprint
+htmldocx==0.0.6
+    # via gpt-researcher
 httpcore==1.0.5
     # via httpx
+httplib2==0.22.0
+    # via google-api-python-client
+    # via google-auth-httplib2
 httptools==0.6.1
     # via uvicorn
 httpx==0.27.2
@@ -238,6 +299,8 @@ httpx==0.27.2
     # via langsmith
     # via openai
     # via qdrant-client
+    # via tavily-python
+    # via unstructured-client
 httpx-sse==0.4.0
     # via cohere
 huggingface-hub==0.25.0
@@ -253,6 +316,7 @@ idna==3.10
     # via httpx
     # via requests
     # via trio
+    # via unstructured-client
     # via yarl
 importlib-metadata==8.4.0
     # via keyring
@@ -272,6 +336,7 @@ jeepney==0.8.0
     # via keyring
     # via secretstorage
 jinja2==3.1.4
+    # via gpt-researcher
     # via litellm
 jiter==0.4.2
     # via instructor
@@ -279,10 +344,17 @@ jiter==0.4.2
 jmespath==1.0.1
     # via boto3
     # via botocore
+joblib==1.4.2
+    # via nltk
 json-repair==0.25.3
     # via crewai
+    # via gpt-researcher
+json5==0.9.25
+    # via gpt-researcher
 jsonpatch==1.33
     # via langchain-core
+jsonpath-python==1.0.6
+    # via unstructured-client
 jsonpointer==3.0.0
     # via jsonpatch
 jsonref==1.1.0
@@ -301,44 +373,77 @@ langchain==0.2.16
     # via crewai
     # via crewai-tools
     # via embedchain
+    # via gpt-researcher
     # via langchain-community
+    # via permchain
 langchain-cohere==0.1.9
     # via embedchain
 langchain-community==0.2.17
     # via embedchain
+    # via gpt-researcher
     # via langchain-experimental
 langchain-core==0.2.41
     # via langchain
     # via langchain-cohere
     # via langchain-community
     # via langchain-experimental
+    # via langchain-google-genai
     # via langchain-openai
     # via langchain-text-splitters
+    # via langgraph
+    # via langgraph-checkpoint
 langchain-experimental==0.0.65
     # via langchain-cohere
+langchain-google-genai==1.0.10
+    # via gpt-researcher
 langchain-openai==0.1.25
     # via embedchain
+    # via gpt-researcher
 langchain-text-splitters==0.2.4
     # via langchain
+langdetect==1.0.9
+    # via unstructured
+langgraph==0.2.23
+    # via gpt-researcher
+langgraph-checkpoint==1.0.10
+    # via langgraph
 langsmith==0.1.125
     # via langchain
     # via langchain-community
     # via langchain-core
 litellm==1.47.0
     # via crewai
+loguru==0.7.2
+    # via gpt-researcher
+lxml==5.3.0
+    # via gpt-researcher
+    # via lxml-html-clean
+    # via python-docx
+    # via unstructured
+lxml-html-clean==0.2.2
+    # via gpt-researcher
 mako==1.3.5
     # via alembic
+markdown==3.7
+    # via gpt-researcher
 markdown-it-py==3.0.0
     # via rich
+markdown2==2.5.0
+    # via md2pdf
 markupsafe==2.1.5
     # via jinja2
     # via mako
 marshmallow==3.22.0
     # via dataclasses-json
+    # via unstructured-client
+md2pdf==1.0.1
+    # via gpt-researcher
 mdurl==0.1.2
     # via markdown-it-py
 mem0ai==0.0.20
     # via embedchain
+mistune==3.0.2
+    # via gpt-researcher
 mmh3==5.0.0
     # via chromadb
 monotonic==1.6
@@ -349,11 +454,17 @@ mpmath==1.3.0
     # via sympy
 msgpack==1.1.0
     # via cachecontrol
+    # via langgraph-checkpoint
 multidict==6.1.0
     # via aiohttp
     # via yarl
 mypy-extensions==1.0.0
     # via typing-inspect
+    # via unstructured-client
+nest-asyncio==1.6.0
+    # via unstructured-client
+nltk==3.9.1
+    # via unstructured
 nodeenv==1.9.1
     # via pyright
 numpy==1.26.4
@@ -368,15 +479,19 @@ numpy==1.26.4
     # via pylance
     # via qdrant-client
     # via shapely
+    # via unstructured
 oauthlib==3.2.2
     # via kubernetes
     # via requests-oauthlib
+olefile==0.47
+    # via python-oxmsg
 onnxruntime==1.19.2
     # via chromadb
 openai==1.47.0
     # via crewai
     # via crewai-tools
     # via embedchain
+    # via gpt-researcher
     # via instructor
     # via langchain-openai
     # via litellm
@@ -421,6 +536,8 @@ opentelemetry-semantic-conventions==0.48b0
 opentelemetry-util-http==0.48b0
     # via opentelemetry-instrumentation-asgi
     # via opentelemetry-instrumentation-fastapi
+orderly-set==5.2.2
+    # via deepdiff
 orjson==3.10.7
     # via chromadb
     # via langsmith
@@ -440,12 +557,17 @@ packaging==24.1
     # via onnxruntime
     # via poetry
     # via pytest
+    # via unstructured-client
 pandas==2.2.3
     # via langchain-cohere
 parameterized==0.9.0
     # via cohere
+permchain==0.0.8
+    # via gpt-researcher
 pexpect==4.9.0
     # via poetry
+pillow==10.4.0
+    # via weasyprint
 pkginfo==1.11.1
     # via poetry
 platformdirs==4.3.6
@@ -470,13 +592,16 @@ posthog==3.6.6
 primp==0.6.2
     # via duckduckgo-search
 proto-plus==1.24.0
+    # via google-ai-generativelanguage
     # via google-api-core
     # via google-cloud-aiplatform
     # via google-cloud-resource-manager
 protobuf==4.25.5
+    # via google-ai-generativelanguage
     # via google-api-core
     # via google-cloud-aiplatform
     # via google-cloud-resource-manager
+    # via google-generativeai
     # via googleapis-common-protos
     # via grpc-google-iam-v1
     # via grpcio-status
@@ -484,6 +609,8 @@ protobuf==4.25.5
     # via onnxruntime
     # via opentelemetry-proto
     # via proto-plus
+psutil==6.0.0
+    # via unstructured
 ptyprocess==0.7.0
     # via pexpect
 pulsar-client==3.5.0
@@ -506,6 +633,8 @@ pydantic==2.9.2
     # via crewai-tools
     # via fastapi
     # via google-cloud-aiplatform
+    # via google-generativeai
+    # via gpt-researcher
     # via instructor
     # via lancedb
     # via langchain
@@ -519,6 +648,8 @@ pydantic-core==2.23.4
     # via cohere
     # via instructor
     # via pydantic
+pydyf==0.11.0
+    # via weasyprint
 pygments==2.18.0
     # via icecream
     # via rich
@@ -526,8 +657,17 @@ pyjwt==2.9.0
     # via auth0-python
 pylance==0.9.18
     # via lancedb
+pymupdf==1.24.10
+    # via gpt-researcher
+pymupdfb==1.24.10
+    # via pymupdf
+pyparsing==3.1.4
+    # via httplib2
 pypdf==4.3.1
     # via embedchain
+    # via unstructured-client
+pyphen==0.16.0
+    # via weasyprint
 pypika==0.48.9
     # via chromadb
 pyproject-hooks==1.1.0
@@ -547,11 +687,24 @@ python-dateutil==2.9.0.post0
     # via kubernetes
     # via pandas
     # via posthog
+    # via unstructured-client
+python-docx==1.1.2
+    # via gpt-researcher
+    # via htmldocx
 python-dotenv==1.0.1
     # via crewai
     # via embedchain
+    # via gpt-researcher
     # via litellm
     # via uvicorn
+python-iso639==2024.4.27
+    # via unstructured
+python-magic==0.4.27
+    # via unstructured
+python-multipart==0.0.10
+    # via gpt-researcher
+python-oxmsg==0.0.1
+    # via unstructured
 pytube==15.0.0
     # via crewai-tools
 pytz==2024.2
@@ -559,6 +712,7 @@ pytz==2024.2
     # via pandas
 pyyaml==6.0.2
     # via chromadb
+    # via gpt-researcher
     # via huggingface-hub
     # via kubernetes
     # via lancedb
@@ -570,6 +724,7 @@ qdrant-client==1.11.2
     # via mem0ai
 rapidfuzz==3.9.7
     # via cleo
+    # via unstructured
 ratelimiter==1.2.0.post0
     # via lancedb
 referencing==0.35.1
@@ -577,8 +732,10 @@ referencing==0.35.1
     # via jsonschema-specifications
 regex==2024.9.11
     # via crewai
+    # via nltk
     # via tiktoken
 requests==2.32.3
+    # via arxiv
     # via auth0-python
     # via cachecontrol
     # via chromadb
@@ -588,6 +745,7 @@ requests==2.32.3
     # via google-api-core
     # via google-cloud-bigquery
     # via google-cloud-storage
+    # via gpt-researcher
     # via gptcache
     # via huggingface-hub
     # via kubernetes
@@ -601,11 +759,15 @@ requests==2.32.3
     # via posthog
     # via requests-oauthlib
     # via requests-toolbelt
+    # via tavily-python
     # via tiktoken
+    # via unstructured
+    # via unstructured-client
 requests-oauthlib==2.0.0
     # via kubernetes
 requests-toolbelt==1.0.0
     # via poetry
+    # via unstructured-client
 retry==0.9.2
     # via lancedb
 rich==13.8.1
@@ -630,6 +792,8 @@ semver==3.0.2
 setuptools==75.1.0
     # via grpcio-tools
     # via opentelemetry-instrumentation
+sgmllib3k==1.0.0
+    # via feedparser
 shapely==2.0.6
     # via google-cloud-aiplatform
 shellingham==1.5.4
@@ -637,9 +801,12 @@ shellingham==1.5.4
     # via typer
 six==1.16.0
     # via asttokens
+    # via html5lib
     # via kubernetes
+    # via langdetect
     # via posthog
     # via python-dateutil
+    # via unstructured-client
 sniffio==1.3.1
     # via anyio
     # via httpx
@@ -652,6 +819,7 @@ soupsieve==2.6
 sqlalchemy==2.0.35
     # via alembic
     # via embedchain
+    # via gpt-researcher
     # via langchain
     # via langchain-community
     # via mem0ai
@@ -661,6 +829,9 @@ sympy==1.13.3
     # via onnxruntime
 tabulate==0.9.0
     # via langchain-cohere
+    # via unstructured
+tavily-python==0.5.0
+    # via gpt-researcher
 tenacity==8.5.0
     # via chromadb
     # via instructor
@@ -669,8 +840,13 @@ tenacity==8.5.0
     # via langchain-core
 tiktoken==0.7.0
     # via embedchain
+    # via gpt-researcher
     # via langchain-openai
     # via litellm
+    # via tavily-python
+tinycss2==1.3.0
+    # via cssselect2
+    # via weasyprint
 tokenizers==0.20.0
     # via chromadb
     # via cohere
@@ -683,9 +859,12 @@ tomlkit==0.13.2
     # via poetry
 tqdm==4.66.5
     # via chromadb
+    # via google-generativeai
     # via huggingface-hub
     # via lancedb
+    # via nltk
     # via openai
+    # via unstructured
 trio==0.26.2
     # via selenium
     # via trio-websocket
@@ -704,7 +883,9 @@ typing-extensions==4.12.2
     # via asgiref
     # via chromadb
     # via cohere
+    # via emoji
     # via fastapi
+    # via google-generativeai
     # via huggingface-hub
     # via langchain-core
     # via multidict
@@ -713,15 +894,26 @@ typing-extensions==4.12.2
     # via pydantic
     # via pydantic-core
     # via pypdf
+    # via python-docx
+    # via python-oxmsg
     # via selenium
     # via sqlalchemy
     # via typer
     # via typing-inspect
+    # via unstructured
+    # via unstructured-client
     # via uvicorn
 typing-inspect==0.9.0
     # via dataclasses-json
+    # via unstructured-client
 tzdata==2024.1
     # via pandas
+unstructured==0.15.13
+    # via gpt-researcher
+unstructured-client==0.25.9
+    # via unstructured
+uritemplate==4.1.1
+    # via google-api-python-client
 urllib3==2.2.3
     # via auth0-python
     # via botocore
@@ -732,25 +924,37 @@ urllib3==2.2.3
     # via requests
     # via selenium
     # via types-requests
+    # via unstructured-client
 uvicorn==0.30.6
     # via chromadb
+    # via gpt-researcher
 uvloop==0.20.0
     # via uvicorn
 virtualenv==20.26.5
     # via poetry
 watchfiles==0.24.0
     # via uvicorn
+weasyprint==62.3
+    # via md2pdf
+webencodings==0.5.1
+    # via cssselect2
+    # via html5lib
+    # via tinycss2
 websocket-client==1.8.0
     # via kubernetes
     # via selenium
 websockets==13.0.1
+    # via gpt-researcher
     # via uvicorn
 wrapt==1.16.0
     # via deprecated
     # via opentelemetry-instrumentation
+    # via unstructured
 wsproto==1.2.0
     # via trio-websocket
 yarl==1.11.1
     # via aiohttp
 zipp==3.20.2
     # via importlib-metadata
+zopfli==0.2.3
+    # via fonttools
