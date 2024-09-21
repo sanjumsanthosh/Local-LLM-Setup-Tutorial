@@ -1,0 +1,11 @@
+
+{
+    "LLM_PROVIDER": "ollama",
+    "FAST_LLM_MODEL": "gemma2:9b",
+    "SMART_LLM_MODEL": "gemma2:9b",
+    "TEMPERATURE": 0.55,
+    "EMBEDDING_PROVIDER": "ollama",
+    "OLLAMA_BASE_URL": "http://localhost:11434",
+    "RETRIEVER": "duckduckgo,arxiv,semantic_scholar",
+    "MAX_SEARCH_RESULTS_PER_QUERY": 10
+}
